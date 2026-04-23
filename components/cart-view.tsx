@@ -128,8 +128,8 @@ export function CartView({
                 className="group flex flex-col sm:flex-row items-start sm:items-center gap-6 rounded-2xl border border-border bg-card/40 p-4 transition-all hover:bg-card hover:shadow-lg hover:shadow-cyan-500/5"
               >
                 <div className="h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-secondary/50 border border-border">
-                  {item.image_url ? (
-                    <img src={item.image_url} alt={item.name} className="h-full w-full object-cover" />
+                  {item.imageUrl ? (
+                    <img src={item.imageUrl} alt={item.name} className="h-full w-full object-cover" />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center">
                       <ShoppingCart className="h-8 w-8 text-muted-foreground/20" />

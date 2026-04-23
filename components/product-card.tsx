@@ -6,14 +6,19 @@ import { cn } from "@/lib/utils"
 export interface Product {
   id: string
   name: string
-  brand: string
+  brand?: string
   price: number
   category: string
-  image_url?: string
+  imageUrl?: string
   description?: string
   attributes?: Record<string, string | number>
   rating?: number
   stock_qty?: number
+  warranty_months?: number
+  is_active?: boolean
+  similarity?: string[]
+  specs?: Record<string, string>
+  "products detail"?: Record<string, string>
 }
 
 interface ProductCardProps {
@@ -29,9 +34,9 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
     >
       {/* Image Container */}
       <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-secondary/50">
-        {product.image_url ? (
+        {product.imageUrl ? (
           <img
-            src={product.image_url}
+            src={product.imageUrl}
             alt={product.name}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />

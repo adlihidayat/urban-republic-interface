@@ -86,7 +86,7 @@ export interface CartItem {
   name: string
   price: number
   quantity: number
-  image_url?: string
+  imageUrl?: string
 }
 
 export default function Home() {
@@ -157,7 +157,7 @@ export default function Home() {
         name: product.name,
         price: product.price,
         quantity: 1,
-        image_url: product.image_url
+        imageUrl: product.imageUrl
       }]
     })
   }, [])
